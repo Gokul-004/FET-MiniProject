@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .item-active{
+            width: 100%;
+   
+  }
+        
+        .c{
+            background-color: rgb(196, 43, 43);
+            
+        }
+        body{
+            margin-top: 3pc;
+        }
+        .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+  .t{
+    color: aliceblue;
+  }
+  .float{
+    
+    float: right;
+    margin-right: 5pc;
+  }
+  th{
+   
+    margin-right: 2pX;
+  }
+  .nav{
+    text-decoration: none;
+    float: right;
+    display: inline;
+    color: aliceblue;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .s{
+    margin-left: 3pc;
+  }
+  .t{
+    margin-left: 2pc;
+    color: black;
+  }
+  .dropdown{
+    float: right;
+    padding-top: 1pc;
+    background-color: aliceblue;
+    text-align: center;
+  }
+ 
+  
+    </style>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function()
+        {
+          $.get("Snack.php",function(data){
+            $("#head1").html(data);
+          });
+          $.get("Tea.php",function(data){
+            $("#head2").html(data);
+          });
+          $.get("Vegetables.php",function(data){
+            $("#head3").html(data);
+          });
+          
+        });
+      });
+    //   $(document).ready(function(){
+    
+    // $("button").click(function(){
+    
+    // $.get("get.php", function(data, status,xhr){
+    
+    // alert("Status: " + status+"\n"+"xhrstatus:"+xhr.statusText);
+    
+    // $("#head").html(data);
+    
+    // }); });
+    
+    // });
+     
+    </script>
+</head>
+
+<body class="mt-2">
+    
+    <div class="container-fluid">
+        <div class="c">
+            <div class="container">
+                <div class="t">
+                 <h1 style="color: white;">Grocery Shop</h1>
+                 <h4 style="color: white;">Online shopping</h4>
+                 
+                    <ul class="nav navbar-nav">
+                      <li><a href="Home.html">Home</a></li>
+                      <li><a href="snacks.html">Delievery</a></li>
+                      <li><a href="">Snack</a></li>
+                      <li><a href="">Vegetables</a></li>
+                      <li><a href="review.html">Review</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="additem.html">Add Item</a></li>
+
+                    
+            
+                    </ul> 
+
+                </div>
+                
+              </div>
+          </div>
+        
+        
+    
+   
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="photo.jpg" alt="Chania">
+            <div class="carousel-caption">
+              <h3>Snacks</h3>
+              <p>All type of Snacks available in all type of brands.</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="g1.jpg" alt="Chania">
+            <div class="carousel-caption">
+              <h3>Vegetables</h3>
+              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="g2.jpg" alt="Flower">
+            <div class="carousel-caption">
+              <h3>Flowers</h3>
+              <p>Beautiful flowers in Kolymbari, Crete.</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="g3.jpg" alt="Flower">
+            <div class="carousel-caption">
+              <h3>Flowers</h3>
+              <p>Beautiful flowers in Kolymbari, Crete.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls --
+                <div class="container">
+        
+        
+        
+        <div class="container p-5 my-5 border">
+          
+                <img src="photo.jpg" alt=""class="img-thumbnail" alt="Cinque Terre" width="1500">
+               
+           
+           
+
+        </div>-->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+        
+
+      <br><br><br>
+      
+   <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="container ">
+            <div class="card" style="width: 18rem;">
+             <img class="card-img-top" src="snack.jpg" alt="Card image cap" >
+             <div class="card-body">
+               <h5 class="card-title">Snacks</h5>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <div class="s"><a href="#" class="btn btn-primary">Buy</a></div><br>
+               <div id="head1" class="t"> <button class="btn btn-primary">Check Offers</button></div>
+             </div>
+           </div>
+         
+          </div>
+  
+        </div>
+        <div class="col-4">
+          <div class="container ">
+            <div class="card" style="width: 18rem;">
+             <img class="card-img-top" src="t1.jfif" alt="Card image cap" >
+             <div class="card-body">
+               <h5 class="card-title">Tea</h5>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <div class="s"><a href="#" class="btn btn-primary">Buy</a></div><br>
+               <div id="head2" class="t"> <button class="btn btn-primary">Check Offers</button></div>
+             </div>
+           </div>
+         
+          </div>
+  
+        </div>
+        <div class="col-4">
+          <div class="container ">
+            <div class="card" style="width: 18rem;">
+             <img class="card-img-top" src="veg.jfif" alt="Card image cap" >
+             <div class="card-body">
+               <h5 class="card-title">Vegetables</h5>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <div class="s"><a href="#" class="btn btn-primary">Buy</a></div><br>
+               <div id="head3" class="t"> <button class="btn btn-primary">Check Offers</button></div>
+             </div>
+           </div>
+         
+          </div>
+  
+        </div>
+      </div>
+
+    </div>
+   </div>
+</body>
+</html>

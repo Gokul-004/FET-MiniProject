@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="groceryApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Management System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.item-active{
+            width: 100%;
+   
+  }
+        
+        .c{
+            background-color: rgb(196, 43, 43);
+            
+        }
+        body{
+            margin-top: 3pc;
+        }
+        .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+  .t{
+    color: aliceblue;
+  }
+  .float{
+    
+    float: right;
+    margin-right: 5pc;
+  }
+  th{
+   
+    margin-right: 2pX;
+  }
+  .nav{
+    text-decoration: none;
+    float: right;
+    display: inline;
+    color: aliceblue;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .s{
+    margin-left: 3pc;
+  }
+  .t{
+    margin-left: 2pc;
+    color: black;
+  }
+  .dropdown{
+    float: right;
+    padding-top: 1pc;
+    background-color: aliceblue;
+    text-align: center;
+  }
+ 
+
+/* Add more styles as needed */
+
+    </style>
+</head>
+<body ng-controller="GroceryController">
+    
+    <h2>Add New Grocery Item</h2>
+    <form ng-submit="addGroceryItem()">
+        <label>Name:</label>
+        <input type="text" ng-model="newItem.name" required><br><br>
+        <label>Quantity:</label>
+        <input type="number" ng-model="newItem.quantity" required><br><br>
+        
+        <label>Price:</label>
+        <input type="number" ng-model="newItem.price" required><br><br>
+        <button type="submit">Add Item</button>
+    </form>
+    <h2>Grocery List</h2>
+    <ul>
+        <li ng-repeat="item in groceryItems">{{item.name}} - Quantity: {{item.quantity}}, Price: {{item.price}}</li>
+    </ul>
+</body>
+</html>
